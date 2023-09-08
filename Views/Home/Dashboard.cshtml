@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <Form action="Logout" method="post"><button>Logout</button></Form>
+    <h1>
+        Welcome @Context.Session.GetString("Name")
+    </h1>
+
+    <p>@Context.Session.GetInt32("Number")</p>
+
+    <Form action="dashboard/plusone" method="post"><button>+1</button></Form>
+    <Form action="dashboard/minusone" method="post"><button>-1</button></Form>
+    <Form action="dashboard/xtwo" method="post"><button>x2</button></Form>
+    <Form action="dashboard/random" method="post"><button>Random</button></Form>
+</div>
